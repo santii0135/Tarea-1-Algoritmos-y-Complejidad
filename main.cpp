@@ -20,23 +20,23 @@ vector<int> readFromFile(const string& filename) {
 }
 
 // Función para escribir los resultados en un archivo
-void testAlgorithm(vector<int>& data, void (*sortFunction)(vector<int>&, int, int), const string& name, ofstream& resultsFile, const string& size) {
+void testAlgorithm(vector<int>& data, void (*sortFunction)(vector<int>&, int, int), const string& name, ofstream& resultsFile, const string& size, const string& folder) {
     auto start = chrono::high_resolution_clock::now();
-    sortFunction(data, 0, data.size() - 1);  // Asegúrate de que la función esté ajustada para este prototipo
+    sortFunction(data, 0, data.size() - 1);
     auto end = chrono::high_resolution_clock::now();
     chrono::duration<double> elapsed = end - start;
     cout << name << " elapsed time: " << elapsed.count() << " seconds." << endl;
     
     // Escribir en el archivo de resultados
-    resultsFile << name << "," << size << "," << elapsed.count() << endl;
+    resultsFile << folder << "," << name << "," << size << "," << elapsed.count() << endl;
 }
 
 int main() {
     ofstream resultsFile("sort_results.csv");
-    resultsFile << "Algorithm,Size,Time\n"; // Encabezado del archivo CSV
+    resultsFile << "Folder,Algorithm,Size,Time\n"; // Encabezado del archivo CSV
 
-    vector<string> folders = {"random", "semi_ordenado", "ordenado"};
-    vector<string> sizes = {"100", "200", "300", "400", "500", "1000", "5000", "10000", "100000", "1000000"};
+    vector<string> folders = {"random", "semi_sorted", "reverse_sorted"};
+    vector<string> sizes = {"100", "200", "300", "400", "500", "1000", "5000", "10000", "100000"};
 
     for (const auto& folder : folders) {
         for (const auto& size : sizes) {
@@ -46,9 +46,9 @@ int main() {
                 continue;
             }
             cout << "Processing " << filename << endl;
-            testAlgorithm(data, quickSort, "Quick Sort", resultsFile, size);
-            testAlgorithm(data, mergeSort, "Merge Sort", resultsFile, size);
-            testAlgorithm(data, selectionSort, "Selection Sort", resultsFile, size);
+            testAlgorithm(data, quickSort, "Quick Sort", resultsFile, size, folder);
+            testAlgorithm(data, mergeSort, "Merge Sort", resultsFile, size, folder);
+            testAlgorithm(data, selectionSort, "Selection Sort", resultsFile, size, folder);
         }
     }
 
