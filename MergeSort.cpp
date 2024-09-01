@@ -1,3 +1,4 @@
+#include "Ordenamiento.h"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -69,7 +70,7 @@ void mergeSort(vector<int>& arr, int left, int right)
 // Function to print a vector
 void printVector(vector<int>& arr)
 {
-    for (int i = 0; i < arr.size(); i++)
+    for (auto i = 0u; i < arr.size(); i++)
         cout << arr[i] << " ";
     cout << endl;
 }
