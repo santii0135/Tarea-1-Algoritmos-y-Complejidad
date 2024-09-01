@@ -26,12 +26,4 @@ void selectionSort(int arr[], int n)
     }
 }
 
-// Function to print an array
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}
-
 // This is code is contributed by rathbhupendra
