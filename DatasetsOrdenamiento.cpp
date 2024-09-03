@@ -49,8 +49,8 @@ int main() {
         auto dataReverseSorted = generateReverseSorted(size);
 
         saveToFile("random", "random_" + to_string(size) + ".bin", dataRandom);
-        saveToFile("semi_ordenado", "semi_sorted_" + to_string(size) + ".bin", dataSemiSorted);
-        saveToFile("ordenado", "reverse_sorted_" + to_string(size) + ".bin", dataReverseSorted);
+        saveToFile("semi_sorted", "semi_sorted_" + to_string(size) + ".bin", dataSemiSorted);
+        saveToFile("reverse_sorted", "reverse_sorted_" + to_string(size) + ".bin", dataReverseSorted);
     }
 
     return 0;
