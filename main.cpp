@@ -36,7 +36,7 @@ int main() {
     resultsFile << "Folder,Algorithm,Size,Time\n"; // Encabezado del archivo CSV
 
     vector<string> folders = {"random", "semi_sorted", "reverse_sorted"};
-    vector<string> sizes = {"100", "200", "300", "400", "500", "1000", "5000", "10000", "50000", 100000"};
+    vector<string> sizes = {"100", "200", "300", "400", "500", "1000", "5000", "10000", "50000", "100000"};
 
     for (const auto& folder : folders) {
         for (const auto& size : sizes) {
