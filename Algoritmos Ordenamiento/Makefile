@@ -8,7 +8,7 @@ CXXFLAGS=-Wall -g
 TARGET=main
 
 # Define todos los objetos
-OBJS=main.o MergeSort.o QuickSort.o SelectionSort.o
+OBJS=main.o MergeSort.o QuickSort.o SelectionSort.o sort.o
 
 # Regla predeterminada para construir el programa
 all: $(TARGET)
@@ -29,6 +29,9 @@ QuickSort.o: QuickSort.cpp Ordenamiento.h
 
 SelectionSort.o: SelectionSort.cpp Ordenamiento.h
 	$(CXX) $(CXXFLAGS) -c SelectionSort.cpp
+
+sort.o: sort.cpp Ordenamiento.h
+	$(CXX) $(CXXFLAGS) -c sort.cpp
 
 # Regla para limpiar archivos temporales y ejecutable
 clean:

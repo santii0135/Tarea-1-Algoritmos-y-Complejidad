@@ -47,6 +47,7 @@ int main() {
             testAlgorithm(data, quickSort, "Quick Sort", resultsFile, size, folder);
             testAlgorithm(data, mergeSort, "Merge Sort", resultsFile, size, folder);
             testAlgorithm(data, selectionSort, "Selection Sort", resultsFile, size, folder);
+            testAlgorithm(data, sort_estandar, "Sort Estándar", resultsFile, size, folder);
         }
     }
 
