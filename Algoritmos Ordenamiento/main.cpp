@@ -18,15 +18,15 @@ vector<int> readFromFile(const string& filename) {
 }
 
 
-void testAlgorithm(vector<int>& data, void (*sortFunction)(vector<int>&, int, int), const string& name, ofstream& resultsFile, const string& size, const string& folder) {
+void testAlgorithm(vector<int>& data, void (*sortFunction)(vector<int>&, int, int), const string& alg, ofstream& resultsFile, const string& size, const string& folder) {
     auto start = chrono::high_resolution_clock::now();
     sortFunction(data, 0, data.size() - 1);
     auto end = chrono::high_resolution_clock::now();
     chrono::duration<double> elapsed = end - start;
-    cout << name << " Tiempo transcurrido: " << elapsed.count() << " segundos." << endl;
+    cout << alg << " Tiempo transcurrido: " << elapsed.count() << " segundos." << endl;
     
     // Escribir en el archivo de resultados
-    resultsFile << folder << "," << name << "," << size << "," << elapsed.count() << endl;
+    resultsFile << folder << "," << alg << "," << size << "," << elapsed.count() << endl;
 }
 
 int main() {
@@ -34,7 +34,7 @@ int main() {
     resultsFile << "Carpeta,Algoritmo,Tamaño,Tiempo\n"; 
 
     vector<string> folders = {"random", "semi_sorted", "reverse_sorted"};
-    vector<string> sizes = {"100", "200", "300", "400", "500", "1000", "5000", "10000", "50000", "100000"};
+    vector<string> sizes = {"100", "500", "1000", "5000", "10000", "20000", "30000", "40000", "50000", "60000", "70000", "80000", "90000", "100000"};
 
     for (const auto& folder : folders) {
         for (const auto& size : sizes) {

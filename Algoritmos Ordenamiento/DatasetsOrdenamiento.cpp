@@ -42,7 +42,7 @@ vector<int> generateReverseSorted(int size) {
 
 int main() {
     srand(time(0));
-    vector<int> sizes = {100, 200, 300, 400, 500, 1000, 5000, 10000, 100000, 50000, 100000};
+    vector<int> sizes = {100, 500, 1000, 5000, 10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000};
 
     for (int size : sizes) {
         auto dataRandom = generateRandom(size);

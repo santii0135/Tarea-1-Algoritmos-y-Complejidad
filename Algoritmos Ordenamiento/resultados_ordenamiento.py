@@ -20,6 +20,8 @@ for folder in folders:
     plt.title(f'Rendimiento Algoritmos - {folder}')
     plt.xlabel('Tamaño del arreglo')
     plt.ylabel('Tiempo (segundos)')
+    plt.xlim(left=0) 
+    plt.ylim(bottom=0)
     plt.ylim(0, 0.5)
     plt.legend()
     plt.grid(True)
