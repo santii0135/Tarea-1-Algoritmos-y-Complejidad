@@ -13,7 +13,7 @@ vector<vector<int>> trasponer(vector<vector<int>>& matriz) {
     return T;
 }
 
-void multiplicar_t(vector<vector<int>> A, vector<vector<int>> B) {
+vector<vector<int>> multiplicar_t(vector<vector<int>> &A, vector<vector<int>> &B) {
     int n = A.size();
     vector<vector<int>> Bt = trasponer(B);
     vector<vector<int>> C(n, vector<int>(n, 0));
@@ -25,4 +25,5 @@ void multiplicar_t(vector<vector<int>> A, vector<vector<int>> B) {
             }
         }
     }
+    return C;
 }

@@ -11,16 +11,21 @@ vector<vector<int>> generarMatriz(int filas, int columnas) {
     vector<vector<int>> matriz(filas, vector<int>(columnas));
     for (int i = 0; i < filas; ++i) {
         for (int j = 0; j < columnas; ++j) {
-            matriz[i][j] = rand() % 30 + 1;;
+            matriz[i][j] = rand() % 10 + 1;;
         }
     }
-
     return matriz;
 }
 
 
-void guardarMatriz(const string& archivo, const vector<vector<int>>& matriz) {
-    ofstream file("matrices/" + archivo, ios::binary);
+void guardarMatriz(const string& archivo, const vector<vector<int>>& matriz, bool cuadrada) {
+    string carpeta;
+    if (cuadrada) {
+        carpeta = "cuadradas/";
+    } else {
+        carpeta = "rectangulares/";
+    }
+    ofstream file("matrices/" + carpeta + archivo, ios::binary);
     if (!file.is_open()) {
         cerr << "Error al abrir el archivo para escribir: " << archivo << endl;
         return;
@@ -42,13 +47,16 @@ void guardarMatriz(const string& archivo, const vector<vector<int>>& matriz) {
 
 int main() {
     srand(time(0));
-    vector<int> dimensiones = {2, 5, 10, 20, 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500};
+    vector<int> dimensiones = {50, 100, 200, 300, 400, 500, 600, 700, 800};
 
-    for (int dim : dimensiones) {
-        auto matrizA = generarMatriz(dim, dim);
-        auto matrizB = generarMatriz(dim, dim);
-        guardarMatriz("matrixA_" + to_string(dim) + "x" + to_string(dim) + ".bin", matrizA);
-        guardarMatriz("matrixB_" + to_string(dim) + "x" + to_string(dim) + ".bin", matrizB);
+    for (int dim1 : dimensiones) {
+        for (int dim2 : dimensiones) {
+            auto matrizA = generarMatriz(dim1, dim2);
+            auto matrizB = generarMatriz(dim2, dim1);
+            bool cuadrada = dim1 == dim2;
+            guardarMatriz("matrixA_" + to_string(dim1) + "x" + to_string(dim2) + ".bin", matrizA, cuadrada);
+            guardarMatriz("matrixB_" + to_string(dim2) + "x" + to_string(dim1) + ".bin", matrizB, cuadrada);
+        }  
     }
 
     return 0;

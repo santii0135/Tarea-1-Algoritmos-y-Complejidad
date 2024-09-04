@@ -8,7 +8,7 @@ CXXFLAGS=-Wall -g
 TARGET=main
 
 # Define todos los objetos
-OBJS=main.o Iterativo_cubico_optimizado.o Iterativo_cubico_tradicional.o
+OBJS=main.o Iterativo_cubico_optimizado.o Iterativo_cubico_tradicional.o strassen.o
 
 # Regla predeterminada para construir el programa
 all: $(TARGET)
@@ -27,8 +27,8 @@ MergeSort.o: Iterativo_cubico_optimizado.cpp Matrices.h
 QuickSort.o: Iterativo_cubico_tradicional.cpp Matrices.h
 	$(CXX) $(CXXFLAGS) -c Iterativo_cubico_tradicional.cpp
 
-#SelectionSort.o: SelectionSort.cpp Matrices.h
-#	$(CXX) $(CXXFLAGS) -c SelectionSort.cpp
+strassen.o: strassen.cpp Matrices.h
+	$(CXX) $(CXXFLAGS) -c strassen.cpp
 
 # Regla para limpiar archivos temporales y ejecutable
 clean:

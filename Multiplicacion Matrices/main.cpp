@@ -3,8 +3,14 @@
 #include "Matrices.h" 
 using namespace std;
 
-vector<vector<int>> leerMatriz(const string& archivo) {
-    ifstream file("matrices/" + archivo, ios::binary);
+vector<vector<int>> leerMatriz(const string& archivo, bool cuadrada) {
+    string carpeta;
+    if (cuadrada) {
+        carpeta = "cuadradas/";
+    } else {
+        carpeta = "rectangulares/";
+    }
+    ifstream file("matrices/" + carpeta + archivo, ios::binary);
     if (!file.is_open()) {
         cerr << "Error al abrir el archivo: " << archivo << endl;
         return {};
@@ -22,34 +28,45 @@ vector<vector<int>> leerMatriz(const string& archivo) {
     return matriz;
 }
 
-void testMultMatriz(const vector<vector<int>>& A, const vector<vector<int>>& B, void (*multiplyFunction)(const vector<vector<int>>, const vector<vector<int>>), const string& alg, ofstream& resultsFile, const string& size) {
+void testMultMatriz(vector<vector<int>>& A, vector<vector<int>>& B, vector<vector<int>> (*multiplyFunction)(vector<vector<int>>&, vector<vector<int>>&), const string& alg, ofstream& resultsFile, const string& size) {
     auto start = chrono::high_resolution_clock::now();
-    multiplyFunction(A, B);  
+    vector<vector<int>> C = multiplyFunction(A, B);  
     auto end = chrono::high_resolution_clock::now();
-    chrono::duration<double> elapsed = end - start;
-    cout << alg << " Tiempo transcurrido: " << elapsed.count() << " segundos." << endl;
-    resultsFile << alg << "," << size << "," << elapsed.count() << endl;
+    chrono::duration<double> tiempo = end - start;
+    cout << alg << " Tiempo transcurrido: " << tiempo.count() << " segundos." << endl;
+    resultsFile << alg << "," << size << "," << tiempo.count() << endl;
 }
 
 
 int main() {
-    vector<string> matrix_sizes = {"2", "5", "10", "20", "50", "100", "200", "300", "400", "500", "600", "700", "800", "900", "1000", "1100", "1200", "1300", "1400", "1500"};
-    ofstream resultsFile("resultados.csv");
-    resultsFile << "Algoritmo,Tamaño,Tiempo\n";
+    vector<string> matrix_sizes = {"50", "100", "200", "300", "400", "500", "600", "700", "800"};
+    ofstream resultscuadrada("resultados_cuadrada.csv");
+    resultscuadrada << "Algoritmo,Tamaño,Tiempo\n";
+    ofstream resultsrect("resultados_rect.csv");
+    resultsrect << "Algoritmo,Cantidad Elementos,Tiempo\n";
 
-    for (const auto& size : matrix_sizes) {
-        string archivoA = "matrixA_" + size + "x" + size + ".bin";
-        string archivoB = "matrixB_" + size + "x" + size + ".bin";
-        vector<vector<int>> A = leerMatriz(archivoA);
-        vector<vector<int>> B = leerMatriz(archivoB);
+    for (const auto& dim1 : matrix_sizes) {
+        for (const auto& dim2 : matrix_sizes) {
+            string archivoA = "matrixA_" + dim1 + "x" + dim2 + ".bin";
+            string archivoB = "matrixB_" + dim2 + "x" + dim1 + ".bin";
+            bool cuadrada = dim1 == dim2;   
+            vector<vector<int>> A = leerMatriz(archivoA, cuadrada);
+            vector<vector<int>> B = leerMatriz(archivoB, cuadrada);
 
-        if (A.empty() || B.empty()) {
-            continue;
+            if (A.empty() || B.empty()) {
+                continue;
+            }
+            int sizeint = stoi(dim1) * stoi(dim2);
+            string size = to_string(sizeint);
+            cout << "Procesando matrix de tamaño: " << dim1 << "x" << dim2 << endl;
+            if (cuadrada) {
+                testMultMatriz(A, B, multiplicar_t, "Iterativo Cubico Optimizado", resultscuadrada, dim1);
+                testMultMatriz(A, B, multiplicar, "Iterativo Cubico", resultscuadrada, dim1);
+                testMultMatriz(A, B, strassen, "Strassen", resultscuadrada, dim1);
+            } else {
+                testMultMatriz(A, B, multiplicar, "Iterativo Cubico", resultsrect, size);
+            }
         }
-
-        cout << "Procesando matrix de tamaño: " << size << "x" << size << endl;
-        testMultMatriz(A, B, multiplicar, "Iterativo Cubico", resultsFile, size);
-        testMultMatriz(A, B, multiplicar_t, "Iterativo Cubico Optimizado", resultsFile, size);
     }
 
     return 0;

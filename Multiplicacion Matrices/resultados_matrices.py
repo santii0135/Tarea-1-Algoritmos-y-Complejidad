@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Leer los datos desde el CSV
-data = pd.read_csv('resultados.csv')
+data = pd.read_csv('resultados_cuadrada.csv')
 
 # Definir el tamaño de la figura
 plt.figure(figsize=(12, 8))
@@ -22,4 +22,18 @@ plt.legend()
 plt.grid(True)
 
 # Mostrar el gráfico
+plt.show()
+
+df = pd.read_csv('resultados_rect.csv')
+# Create the scatter plot with points instead of crosses
+plt.figure(figsize=(10,6))
+plt.plot(df['Cantidad Elementos'], df['Tiempo'], 'o', color='blue', label='Iterativo Cubico')  # 'o' for points
+
+plt.xlabel('Cantidad de Elementos')
+plt.ylabel('Tiempo (s)')
+plt.title('Tiempo de Ejecución vs Cantidad de Elementos')
+plt.legend()
+plt.grid(True)
+
+# Show the plot
 plt.show()

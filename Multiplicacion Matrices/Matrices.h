@@ -4,8 +4,8 @@
 #include <vector>
 using namespace std;
 
-void multiplicar(vector<vector<int>> A, vector<vector<int>> B);
-void multiplicar_t(vector<vector<int>> A, vector<vector<int>> B);
-void mergeSort(vector<int>& data, int left, int right);
+vector<vector<int>> multiplicar(vector<vector<int>> &A, vector<vector<int>> &B);
+vector<vector<int>> multiplicar_t(vector<vector<int>> &A, vector<vector<int>> &B);
+vector<vector<int>> strassen(vector<vector<int>> &A, vector<vector<int>> &B);
 
 #endif 
