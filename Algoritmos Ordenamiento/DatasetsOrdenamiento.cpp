@@ -1,7 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 #include <cstdlib>
 #include <ctime>
 

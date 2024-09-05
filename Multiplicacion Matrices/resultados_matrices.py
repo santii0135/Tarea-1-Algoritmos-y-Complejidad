@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('resultados_cuadrada.csv')
 
 # Definir el tamaño de la figura
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(11, 7))
 
 # Iterar sobre cada algoritmo y graficar su rendimiento
 for name in data['Algoritmo'].unique():
@@ -13,7 +13,7 @@ for name in data['Algoritmo'].unique():
     plt.plot(subset_algorithm['Tamaño'], subset_algorithm['Tiempo'], marker='o', label=name)
 
 # Configurar el título y las etiquetas de los ejes
-plt.title('Rendimiento de Algoritmos de Multiplicación de Matrices')
+plt.title('Rendimiento de Algoritmos de Multiplicación de Matrices Cuadradas')
 plt.xlabel('Tamaño de la matriz (n x n)')
 plt.xlim(left=0) 
 plt.ylim(bottom=0)
@@ -27,11 +27,11 @@ plt.show()
 df = pd.read_csv('resultados_rect.csv')
 # Create the scatter plot with points instead of crosses
 plt.figure(figsize=(10,6))
-plt.plot(df['Cantidad Elementos'], df['Tiempo'], 'o', color='blue', label='Iterativo Cubico')  # 'o' for points
+plt.plot(df['Cantidad Elementos'], df['Tiempo'], 'o', color='blue', label='Iterativo Cubico') 
 
 plt.xlabel('Cantidad de Elementos')
 plt.ylabel('Tiempo (s)')
-plt.title('Tiempo de Ejecución vs Cantidad de Elementos')
+plt.title('Tiempo de Ejecución vs Cantidad de Elementos para Multiplicación de Matrices Rectangulares')
 plt.legend()
 plt.grid(True)
 

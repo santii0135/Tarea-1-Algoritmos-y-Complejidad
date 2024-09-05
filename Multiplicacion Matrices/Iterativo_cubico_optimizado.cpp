@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<vector<int>> trasponer(vector<vector<int>>& matriz) {
+vector<vector<int>> trasponer(vector<vector<int>> matriz) {
     int n = matriz.size();
     vector<vector<int>> T(n, vector<int>(n));
 

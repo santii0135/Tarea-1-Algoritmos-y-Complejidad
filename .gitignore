@@ -1,5 +1,6 @@
 # Ignorar todos los archivos objeto
 *.o
+*.png
 
 # Ignorar el ejecutable
 main

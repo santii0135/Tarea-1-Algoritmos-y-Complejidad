@@ -60,8 +60,8 @@ int main() {
             string size = to_string(sizeint);
             cout << "Procesando matrix de tamaño: " << dim1 << "x" << dim2 << endl;
             if (cuadrada) {
-                testMultMatriz(A, B, multiplicar_t, "Iterativo Cubico Optimizado", resultscuadrada, dim1);
                 testMultMatriz(A, B, multiplicar, "Iterativo Cubico", resultscuadrada, dim1);
+                testMultMatriz(A, B, multiplicar_t, "Iterativo Cubico Optimizado", resultscuadrada, dim1);
                 testMultMatriz(A, B, strassen, "Strassen", resultscuadrada, dim1);
             } else {
                 testMultMatriz(A, B, multiplicar, "Iterativo Cubico", resultsrect, size);
