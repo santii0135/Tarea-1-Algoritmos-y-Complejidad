@@ -38,7 +38,7 @@ int main() {
 
     for (const auto& folder : folders) {
         for (const auto& size : sizes) {
-            string filename = folder + "/" + folder + "_" + size + ".bin";
+            string filename = "datasets/" + folder + "/" + folder + "_" + size + ".bin";
             vector<int> data = readFromFile(filename);
             if (data.empty()) {
                 continue;

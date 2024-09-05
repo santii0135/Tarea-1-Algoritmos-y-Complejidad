@@ -5,7 +5,7 @@
 using namespace std;
 
 void saveToFile(const string& carpeta, const string& archivo, const vector<int>& data) {
-    ofstream file(carpeta + "/" + archivo, ios::out | ios::binary);
+    ofstream file("datasets/" + carpeta + "/" + archivo, ios::out | ios::binary);
     if (!file.is_open()) {
         cout << "No se pudo abrir el archivo para escribir: " << archivo << endl;
         return;

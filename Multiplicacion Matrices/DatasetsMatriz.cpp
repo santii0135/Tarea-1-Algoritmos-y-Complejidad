@@ -23,7 +23,7 @@ void guardarMatriz(const string& archivo, const vector<vector<int>>& matriz, boo
     } else {
         carpeta = "rectangulares/";
     }
-    ofstream file("matrices/" + carpeta + archivo, ios::binary);
+    ofstream file("datasets/" + carpeta + archivo, ios::binary);
     if (!file.is_open()) {
         cerr << "Error al abrir el archivo para escribir: " << archivo << endl;
         return;

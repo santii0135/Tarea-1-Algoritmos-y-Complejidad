@@ -10,7 +10,7 @@ vector<vector<int>> leerMatriz(const string& archivo, bool cuadrada) {
     } else {
         carpeta = "rectangulares/";
     }
-    ifstream file("matrices/" + carpeta + archivo, ios::binary);
+    ifstream file("datasets/" + carpeta + archivo, ios::binary);
     if (!file.is_open()) {
         cerr << "Error al abrir el archivo: " << archivo << endl;
         return {};
