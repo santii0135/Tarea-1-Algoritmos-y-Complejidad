@@ -1,28 +1,28 @@
 Algoritmo,Tamaño,Tiempo
-Iterativo Cubico,50,0.00107518
-Iterativo Cubico Optimizado,50,0.00107715
-Strassen,50,0.00104993
-Iterativo Cubico,100,0.00894361
-Iterativo Cubico Optimizado,100,0.0093033
-Strassen,100,0.00903668
-Iterativo Cubico,200,0.0732405
-Iterativo Cubico Optimizado,200,0.0722935
-Strassen,200,0.0609955
-Iterativo Cubico,300,0.236087
-Iterativo Cubico Optimizado,300,0.230111
-Strassen,300,0.184092
-Iterativo Cubico,400,0.565874
-Iterativo Cubico Optimizado,400,0.552622
-Strassen,400,0.455224
-Iterativo Cubico,500,1.10877
-Iterativo Cubico Optimizado,500,1.10143
-Strassen,500,0.793005
-Iterativo Cubico,600,1.88528
-Iterativo Cubico Optimizado,600,1.86401
-Strassen,600,1.335
-Iterativo Cubico,700,2.96372
-Iterativo Cubico Optimizado,700,2.90619
-Strassen,700,1.95084
-Iterativo Cubico,800,4.4603
-Iterativo Cubico Optimizado,800,4.32225
-Strassen,800,3.04014
+Iterativo Cubico,50,0.00103548
+Iterativo Cubico Optimizado,50,0.00143339
+Strassen,50,0.0010333
+Iterativo Cubico,100,0.00836053
+Iterativo Cubico Optimizado,100,0.00913927
+Strassen,100,0.00900609
+Iterativo Cubico,200,0.0699898
+Iterativo Cubico Optimizado,200,0.067545
+Strassen,200,0.0679302
+Iterativo Cubico,300,0.228909
+Iterativo Cubico Optimizado,300,0.231975
+Strassen,300,0.192177
+Iterativo Cubico,400,0.551084
+Iterativo Cubico Optimizado,400,0.546342
+Strassen,400,0.428399
+Iterativo Cubico,500,1.04613
+Iterativo Cubico Optimizado,500,1.03103
+Strassen,500,0.784089
+Iterativo Cubico,600,1.82303
+Iterativo Cubico Optimizado,600,1.79038
+Strassen,600,1.30867
+Iterativo Cubico,700,2.89693
+Iterativo Cubico Optimizado,700,2.83173
+Strassen,700,1.93311
+Iterativo Cubico,800,4.38734
+Iterativo Cubico Optimizado,800,4.24597
+Strassen,800,3.01983

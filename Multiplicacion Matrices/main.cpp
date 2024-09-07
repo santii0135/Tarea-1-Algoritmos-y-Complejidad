@@ -65,6 +65,7 @@ int main() {
                 testMultMatriz(A, B, strassen, "Strassen", resultscuadrada, dim1);
             } else {
                 testMultMatriz(A, B, multiplicar, "Iterativo Cubico", resultsrect, size);
+                testMultMatriz(A, B, multiplicar_t, "Iterativo Cubico Optimizado", resultsrect, size);
             }
         }
     }

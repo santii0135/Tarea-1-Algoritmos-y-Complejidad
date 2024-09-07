@@ -1,73 +1,145 @@
 Algoritmo,Cantidad Elementos,Tiempo
-Iterativo Cubico,5000,0.00212385
-Iterativo Cubico,10000,0.00417044
-Iterativo Cubico,15000,0.00690281
-Iterativo Cubico,20000,0.00868503
-Iterativo Cubico,25000,0.0104943
-Iterativo Cubico,30000,0.0128065
-Iterativo Cubico,35000,0.0159671
-Iterativo Cubico,40000,0.018435
-Iterativo Cubico,5000,0.00426649
-Iterativo Cubico,20000,0.0181001
-Iterativo Cubico,30000,0.0277484
-Iterativo Cubico,40000,0.0346446
-Iterativo Cubico,50000,0.0448075
-Iterativo Cubico,60000,0.0536671
-Iterativo Cubico,70000,0.0613573
-Iterativo Cubico,80000,0.0701055
-Iterativo Cubico,10000,0.0183205
-Iterativo Cubico,20000,0.0365725
-Iterativo Cubico,60000,0.10552
-Iterativo Cubico,80000,0.141462
-Iterativo Cubico,100000,0.169294
-Iterativo Cubico,120000,0.209856
-Iterativo Cubico,140000,0.257661
-Iterativo Cubico,160000,0.278101
-Iterativo Cubico,15000,0.0417027
-Iterativo Cubico,30000,0.077758
-Iterativo Cubico,60000,0.154212
-Iterativo Cubico,120000,0.316749
-Iterativo Cubico,150000,0.395896
-Iterativo Cubico,180000,0.469942
-Iterativo Cubico,210000,0.547338
-Iterativo Cubico,240000,0.624974
-Iterativo Cubico,20000,0.0699157
-Iterativo Cubico,40000,0.139644
-Iterativo Cubico,80000,0.280119
-Iterativo Cubico,120000,0.417137
-Iterativo Cubico,200000,0.779886
-Iterativo Cubico,240000,0.87282
-Iterativo Cubico,280000,0.991482
-Iterativo Cubico,320000,1.13557
-Iterativo Cubico,25000,0.11296
-Iterativo Cubico,50000,0.220832
-Iterativo Cubico,100000,0.452917
-Iterativo Cubico,150000,0.658216
-Iterativo Cubico,200000,0.875841
-Iterativo Cubico,300000,1.3286
-Iterativo Cubico,350000,1.53767
-Iterativo Cubico,400000,1.76879
-Iterativo Cubico,30000,0.162742
-Iterativo Cubico,60000,0.316626
-Iterativo Cubico,120000,0.646471
-Iterativo Cubico,180000,0.949593
-Iterativo Cubico,240000,1.30426
-Iterativo Cubico,300000,1.60902
-Iterativo Cubico,420000,2.20131
-Iterativo Cubico,480000,2.66632
-Iterativo Cubico,35000,0.220548
-Iterativo Cubico,70000,0.43468
-Iterativo Cubico,140000,0.919939
-Iterativo Cubico,210000,1.36064
-Iterativo Cubico,280000,1.75193
-Iterativo Cubico,350000,2.28478
-Iterativo Cubico,420000,2.55589
-Iterativo Cubico,560000,3.41016
-Iterativo Cubico,40000,0.284753
-Iterativo Cubico,80000,0.569317
-Iterativo Cubico,160000,1.12461
-Iterativo Cubico,240000,1.70003
-Iterativo Cubico,320000,2.22288
-Iterativo Cubico,400000,2.81601
-Iterativo Cubico,480000,3.37666
-Iterativo Cubico,560000,3.94737
+Iterativo Cubico,5000,0.00206153
+Iterativo Cubico Optimizado,5000,0.00215415
+Iterativo Cubico,10000,0.00419583
+Iterativo Cubico Optimizado,10000,0.0047379
+Iterativo Cubico,15000,0.00708453
+Iterativo Cubico Optimizado,15000,0.00669879
+Iterativo Cubico,20000,0.00845423
+Iterativo Cubico Optimizado,20000,0.00982794
+Iterativo Cubico,25000,0.0108518
+Iterativo Cubico Optimizado,25000,0.0107495
+Iterativo Cubico,30000,0.0127328
+Iterativo Cubico Optimizado,30000,0.0130262
+Iterativo Cubico,35000,0.0147995
+Iterativo Cubico Optimizado,35000,0.0148835
+Iterativo Cubico,40000,0.0173251
+Iterativo Cubico Optimizado,40000,0.017388
+Iterativo Cubico,5000,0.00434224
+Iterativo Cubico Optimizado,5000,0.004624
+Iterativo Cubico,20000,0.0166583
+Iterativo Cubico Optimizado,20000,0.0165728
+Iterativo Cubico,30000,0.0251676
+Iterativo Cubico Optimizado,30000,0.0252267
+Iterativo Cubico,40000,0.0337456
+Iterativo Cubico Optimizado,40000,0.0335845
+Iterativo Cubico,50000,0.0422209
+Iterativo Cubico Optimizado,50000,0.0428832
+Iterativo Cubico,60000,0.0509175
+Iterativo Cubico Optimizado,60000,0.0500184
+Iterativo Cubico,70000,0.0597074
+Iterativo Cubico Optimizado,70000,0.059667
+Iterativo Cubico,80000,0.067138
+Iterativo Cubico Optimizado,80000,0.0678241
+Iterativo Cubico,10000,0.0184071
+Iterativo Cubico Optimizado,10000,0.0187244
+Iterativo Cubico,20000,0.0390231
+Iterativo Cubico Optimizado,20000,0.0359178
+Iterativo Cubico,60000,0.10097
+Iterativo Cubico Optimizado,60000,0.101837
+Iterativo Cubico,80000,0.13634
+Iterativo Cubico Optimizado,80000,0.139977
+Iterativo Cubico,100000,0.193077
+Iterativo Cubico Optimizado,100000,0.169631
+Iterativo Cubico,120000,0.206661
+Iterativo Cubico Optimizado,120000,0.198756
+Iterativo Cubico,140000,0.236413
+Iterativo Cubico Optimizado,140000,0.237411
+Iterativo Cubico,160000,0.267557
+Iterativo Cubico Optimizado,160000,0.284663
+Iterativo Cubico,15000,0.0438059
+Iterativo Cubico Optimizado,15000,0.0417483
+Iterativo Cubico,30000,0.0776333
+Iterativo Cubico Optimizado,30000,0.0777614
+Iterativo Cubico,60000,0.152118
+Iterativo Cubico Optimizado,60000,0.159366
+Iterativo Cubico,120000,0.314161
+Iterativo Cubico Optimizado,120000,0.29852
+Iterativo Cubico,150000,0.380303
+Iterativo Cubico Optimizado,150000,0.372335
+Iterativo Cubico,180000,0.45278
+Iterativo Cubico Optimizado,180000,0.445917
+Iterativo Cubico,210000,0.529489
+Iterativo Cubico Optimizado,210000,0.519349
+Iterativo Cubico,240000,0.608063
+Iterativo Cubico Optimizado,240000,0.597618
+Iterativo Cubico,20000,0.0688923
+Iterativo Cubico Optimizado,20000,0.0686624
+Iterativo Cubico,40000,0.132286
+Iterativo Cubico Optimizado,40000,0.13463
+Iterativo Cubico,80000,0.270591
+Iterativo Cubico Optimizado,80000,0.270411
+Iterativo Cubico,120000,0.404847
+Iterativo Cubico Optimizado,120000,0.396887
+Iterativo Cubico,200000,0.670145
+Iterativo Cubico Optimizado,200000,0.667379
+Iterativo Cubico,240000,0.808357
+Iterativo Cubico Optimizado,240000,0.797308
+Iterativo Cubico,280000,0.94696
+Iterativo Cubico Optimizado,280000,0.932234
+Iterativo Cubico,320000,1.08082
+Iterativo Cubico Optimizado,320000,1.05675
+Iterativo Cubico,25000,0.105889
+Iterativo Cubico Optimizado,25000,0.106741
+Iterativo Cubico,50000,0.209405
+Iterativo Cubico Optimizado,50000,0.211509
+Iterativo Cubico,100000,0.433943
+Iterativo Cubico Optimizado,100000,0.423736
+Iterativo Cubico,150000,0.639747
+Iterativo Cubico Optimizado,150000,0.622005
+Iterativo Cubico,200000,0.84396
+Iterativo Cubico Optimizado,200000,0.838842
+Iterativo Cubico,300000,1.25732
+Iterativo Cubico Optimizado,300000,1.2412
+Iterativo Cubico,350000,1.47007
+Iterativo Cubico Optimizado,350000,1.48058
+Iterativo Cubico,400000,1.71609
+Iterativo Cubico Optimizado,400000,1.64748
+Iterativo Cubico,30000,0.152853
+Iterativo Cubico Optimizado,30000,0.153777
+Iterativo Cubico,60000,0.308023
+Iterativo Cubico Optimizado,60000,0.306411
+Iterativo Cubico,120000,0.610332
+Iterativo Cubico Optimizado,120000,0.595032
+Iterativo Cubico,180000,0.915739
+Iterativo Cubico Optimizado,180000,0.896194
+Iterativo Cubico,240000,1.21278
+Iterativo Cubico Optimizado,240000,1.19706
+Iterativo Cubico,300000,1.51556
+Iterativo Cubico Optimizado,300000,1.48426
+Iterativo Cubico,420000,2.13338
+Iterativo Cubico Optimizado,420000,2.0847
+Iterativo Cubico,480000,2.42572
+Iterativo Cubico Optimizado,480000,2.36485
+Iterativo Cubico,35000,0.214256
+Iterativo Cubico Optimizado,35000,0.210776
+Iterativo Cubico,70000,0.421157
+Iterativo Cubico Optimizado,70000,0.412958
+Iterativo Cubico,140000,0.837378
+Iterativo Cubico Optimizado,140000,0.814377
+Iterativo Cubico,210000,1.27602
+Iterativo Cubico Optimizado,210000,1.22443
+Iterativo Cubico,280000,1.66405
+Iterativo Cubico Optimizado,280000,1.63096
+Iterativo Cubico,350000,2.07423
+Iterativo Cubico Optimizado,350000,2.02926
+Iterativo Cubico,420000,2.48133
+Iterativo Cubico Optimizado,420000,2.4273
+Iterativo Cubico,560000,3.3429
+Iterativo Cubico Optimizado,560000,3.38665
+Iterativo Cubico,40000,0.327575
+Iterativo Cubico Optimizado,40000,0.282155
+Iterativo Cubico,80000,0.591888
+Iterativo Cubico Optimizado,80000,0.54991
+Iterativo Cubico,160000,1.09996
+Iterativo Cubico Optimizado,160000,1.10515
+Iterativo Cubico,240000,1.63247
+Iterativo Cubico Optimizado,240000,1.61883
+Iterativo Cubico,320000,2.16686
+Iterativo Cubico Optimizado,320000,2.1204
+Iterativo Cubico,400000,2.73484
+Iterativo Cubico Optimizado,400000,2.66178
+Iterativo Cubico,480000,3.27273
+Iterativo Cubico Optimizado,480000,3.17406
+Iterativo Cubico,560000,3.8256
+Iterativo Cubico Optimizado,560000,3.76626

@@ -25,15 +25,18 @@ plt.grid(True)
 plt.show()
 
 df = pd.read_csv('resultados_rect.csv')
-# Create the scatter plot with points instead of crosses
-plt.figure(figsize=(10,6))
-plt.plot(df['Cantidad Elementos'], df['Tiempo'], 'o', color='blue', label='Iterativo Cubico') 
+
+
+for name in df['Algoritmo'].unique():
+    subset_algorithm = df[df['Algoritmo'] == name]
+    plt.scatter(subset_algorithm['Cantidad Elementos'], subset_algorithm['Tiempo'], label=name)
+
 
 plt.xlabel('Cantidad de Elementos')
 plt.ylabel('Tiempo (s)')
-plt.title('Tiempo de Ejecución vs Cantidad de Elementos para Multiplicación de Matrices Rectangulares')
+plt.title('Tiempo de Ejecución vs Cantidad de Elementos para multiplicación de Matrices Rectangulares')
+
+
 plt.legend()
 plt.grid(True)
-
-# Show the plot
 plt.show()
