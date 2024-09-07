@@ -26,7 +26,7 @@ plt.show()
 
 df = pd.read_csv('resultados_rect.csv')
 
-
+plt.figure(figsize=(11, 7))
 for name in df['Algoritmo'].unique():
     subset_algorithm = df[df['Algoritmo'] == name]
     plt.scatter(subset_algorithm['Cantidad Elementos'], subset_algorithm['Tiempo'], label=name)
