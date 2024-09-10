@@ -18,7 +18,7 @@ void restar(vector<vector<int>>& result, const vector<vector<int>>& X, const vec
 
 vector<vector<int>> strassen(vector<vector<int>> &X, vector<vector<int>> &Y) {
     int n = X.size();
-    if (n <= 64) { // Base case size, adjust based on profiling
+    if (n <= 64) { // Caso base, para matrices menores a 64x64 utiliza multiplicacion tradicional
         vector<vector<int>> Z(n, vector<int>(n, 0));
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
